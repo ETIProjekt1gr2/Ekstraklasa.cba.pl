@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html <?php language_attributes(); ?>
+<?php
+/*
+Template Name: Front Page
+*/
+?>
+<head>
+
+    
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<title><?php Ekstraklasa.cba.pl; ?></title>
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<?php wp_head(); ?> 
+	<meta http-equiv="Content-language" content="pl-PL">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="pl" />
+	<meta name="Keywords" content="ekstraklasa, liga" />
+	<meta name="Description" content="Strona o polskiej lidze piłki nożnej" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+</head>
+
+<body>
+<div id="kontener">
+<div id="naglowek">
+
+ <a class="tekst"><h4>Śleźisz nas?</h4></a>
+ <a class="fb" href="#"><span></span></a><!FB!>
+ <a class="gplus" href="#"><span></span></a><!G+!>
+ <a class="twitter" href="#"><span></span></a><!TWITTER!>
+ <a class="rss" href="#"<span></span></a><!RSS!>
+</div>
+<div id="menu"> 
+ <a class="button1" href="#"><span></span></a> <!GŁÓWNANA!>
+ <a class="button2" href="#"><span></span></a> <!AKTUALNOŚCI!>
+ <a class="button3" href="#"><span></span></a> <!TABELA!>
+ <a class="button4" href="#"><span></span></a> <!TERMINARZ!>
+ <a class="button5" href="#"><span></span></a> <!KLUBY!>
+</div>
+<div id="tytul">
+<div id="slider" > 
+<?php masterslider(9); ?>
+</div>
+	  <a class="dzialka" <h2>NAJNOWSZE WPISY ></h2></a>
+</div>
+<div id="tresc">
+<a id="slidebar">
+<?php
+if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+	<div id="secondary" class="sidebar-container" role="complementary">
+		<div class="widget-area">
+			<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		</div><!-- .widget-area -->
+	</div><!-- #secondary -->
+<?php endif; ?>
+if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+	<div id="tertiary" class="sidebar-container" role="complementary">
+		<div class="sidebar-inner">
+			<div class="widget-area">
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div><!-- .widget-area -->
+		</div><!-- .sidebar-inner -->
+	</div><!-- #tertiary -->
+<?php endif; ?>
+</a>
+</div>
+
+<div id="podpis"><p>jakiś tekst </p></div>
+
+<div id="stopka">
+
+<div id="design">Design by</div>
+</div>
+</div>
+<?php wp_footer(); ?>    
+</body>
+
+
+</html>
